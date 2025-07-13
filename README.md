@@ -58,7 +58,13 @@ composer test
 # Run static analysis
 composer phpstan
 
-# Run all checks
+# Fix code style (PSR-12)
+composer cs-fix
+
+# Check code style without fixing
+composer cs-check
+
+# Run all checks (code style + static analysis + tests)
 composer check
 ```
 
