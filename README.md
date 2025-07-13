@@ -205,6 +205,7 @@ class CustomDeliveryRule implements DeliveryRuleInterface
 
 - **PHPUnit**: Unit and integration testing
 - **PHPStan**: Static analysis at level 8
+- **PHP CS Fixer**: PSR-12 code style enforcement with custom rules
 - **Docker**: Containerized development environment
 - **Composer**: Dependency management and autoloading
 
