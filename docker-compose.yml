@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: tail -f /dev/null
+
+  composer:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: composer
+
+  phpunit:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: vendor/bin/phpunit
+
+  phpstan:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: vendor/bin/phpstan
