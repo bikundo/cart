@@ -33,7 +33,7 @@ final class RedWidgetBuyOneGetSecondHalfPriceOfferTest extends TestCase
     public function testNoDiscountForSingleRedWidget(): void
     {
         $items = [
-            new BasketItem(new ProductCode('R01'), 1)
+            new BasketItem(new ProductCode('R01'), 1),
         ];
 
         $discount = $this->offer->calculateDiscount($items, $this->catalogue);
@@ -44,7 +44,7 @@ final class RedWidgetBuyOneGetSecondHalfPriceOfferTest extends TestCase
     public function testDiscountForTwoRedWidgets(): void
     {
         $items = [
-            new BasketItem(new ProductCode('R01'), 2)
+            new BasketItem(new ProductCode('R01'), 2),
         ];
 
         $discount = $this->offer->calculateDiscount($items, $this->catalogue);
@@ -56,7 +56,7 @@ final class RedWidgetBuyOneGetSecondHalfPriceOfferTest extends TestCase
     public function testDiscountForThreeRedWidgets(): void
     {
         $items = [
-            new BasketItem(new ProductCode('R01'), 3)
+            new BasketItem(new ProductCode('R01'), 3),
         ];
 
         $discount = $this->offer->calculateDiscount($items, $this->catalogue);
@@ -68,7 +68,7 @@ final class RedWidgetBuyOneGetSecondHalfPriceOfferTest extends TestCase
     public function testDiscountForFourRedWidgets(): void
     {
         $items = [
-            new BasketItem(new ProductCode('R01'), 4)
+            new BasketItem(new ProductCode('R01'), 4),
         ];
 
         $discount = $this->offer->calculateDiscount($items, $this->catalogue);
@@ -80,7 +80,7 @@ final class RedWidgetBuyOneGetSecondHalfPriceOfferTest extends TestCase
     public function testNoDiscountForOtherProducts(): void
     {
         $items = [
-            new BasketItem(new ProductCode('G01'), 2)
+            new BasketItem(new ProductCode('G01'), 2),
         ];
 
         $discount = $this->offer->calculateDiscount($items, $this->catalogue);

@@ -6,7 +6,6 @@ namespace Acme\Cart\Services\Offers;
 
 use Acme\Cart\Contracts\OfferInterface;
 use Acme\Cart\Contracts\ProductCatalogueInterface;
-use Acme\Cart\Entities\BasketItem;
 use Acme\Cart\ValueObjects\Money;
 use Acme\Cart\ValueObjects\ProductCode;
 

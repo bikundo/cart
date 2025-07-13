@@ -6,9 +6,9 @@ namespace Acme\Cart\Factory;
 
 use Acme\Cart\Entities\Product;
 use Acme\Cart\Services\Basket;
+use Acme\Cart\Services\Offers\RedWidgetBuyOneGetSecondHalfPriceOffer;
 use Acme\Cart\Services\ProductCatalogue;
 use Acme\Cart\Services\TieredDeliveryRule;
-use Acme\Cart\Services\Offers\RedWidgetBuyOneGetSecondHalfPriceOffer;
 use Acme\Cart\ValueObjects\Money;
 use Acme\Cart\ValueObjects\ProductCode;
 
@@ -22,7 +22,7 @@ final class BasketFactory
         $catalogue = self::createDefaultCatalogue();
         $deliveryRule = new TieredDeliveryRule();
         $offers = [
-            new RedWidgetBuyOneGetSecondHalfPriceOffer()
+            new RedWidgetBuyOneGetSecondHalfPriceOffer(),
         ];
 
         return new Basket($catalogue, $deliveryRule, $offers);

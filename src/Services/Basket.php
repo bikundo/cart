@@ -77,6 +77,7 @@ final class Basket
     public function getDeliveryCharge(): Money
     {
         $subtotalAfterDiscounts = $this->calculateSubtotal()->subtract($this->calculateDiscounts());
+
         return $this->deliveryRule->calculateDeliveryCharge($subtotalAfterDiscounts);
     }
 
@@ -87,6 +88,7 @@ final class Basket
                 return $item;
             }
         }
+
         return null;
     }
 
