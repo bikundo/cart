@@ -43,6 +43,6 @@ final class RedWidgetBuyOneGetSecondHalfPriceOffer implements OfferInterface
 
     public function getDescription(): string
     {
-        return 'Buy one red widget, get the second half price';
+        return 'Buy one red widget, get the second half price!';
     }
 }
